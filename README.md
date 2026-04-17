@@ -2,7 +2,7 @@
 
 API REST para gerenciamento de tarefas, desenvolvida com .NET 10 seguindo os princípios de Clean Architecture.
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 O projeto é dividido em 4 camadas:
 
@@ -11,7 +11,7 @@ O projeto é dividido em 4 camadas:
 - **Infrastructure** — acesso a dados com EF Core e SQL Server
 - **API** — controllers, Swagger e configuração da aplicação
 
-## 🚀 Tecnologias
+## Tecnologias
 
 - .NET 10
 - ASP.NET Core
@@ -19,33 +19,28 @@ O projeto é dividido em 4 camadas:
 - MediatR (CQRS)
 - SQL Server / LocalDB
 - Swagger / OpenAPI
-- xUnit
-- Moq
-- FluentAssertions
+- xUnit + Moq + FluentAssertions
 
-## ⚙️ Como rodar localmente
+## Como rodar localmente
 
-**Pré-requisitos:** .NET 10 SDK e SQL Server ou LocalDB instalados.
+Pré-requisitos: .NET 10 SDK e SQL Server ou LocalDB instalados.
 
 Clone o repositório:
-```bash
-git clone https://github.com/pedrinhopontes/task-manager-api.git
-cd task-manager-api
-```
+
+    git clone https://github.com/pedrinhopontes/task-manager-api.git
+    cd task-manager-api
 
 Aplique as migrations:
-```bash
-dotnet ef database update --project TaskManager.Infrastructure --startup-project TaskManager.API
-```
+
+    dotnet ef database update --project TaskManager.Infrastructure --startup-project TaskManager.API
 
 Rode a aplicação:
-```bash
-dotnet run --project TaskManager.API
-```
 
-Acesse o Swagger em `https://localhost:7267/swagger`
+    dotnet run --project TaskManager.API
 
-## 📋 Endpoints
+Acesse o Swagger em https://localhost:7267/swagger
+
+## Endpoints
 
 | Método | Rota | Descrição |
 |--------|------|-----------|
@@ -53,10 +48,8 @@ Acesse o Swagger em `https://localhost:7267/swagger`
 | POST | /api/tasks | Cria uma nova tarefa |
 | PATCH | /api/tasks/{id}/complete | Marca uma tarefa como concluída |
 
-## 🧪 Testes
+## Testes
 
-```bash
-dotnet test
-```
+    dotnet test
 
 4 testes unitários cobrindo os handlers de criação e conclusão de tarefas.
